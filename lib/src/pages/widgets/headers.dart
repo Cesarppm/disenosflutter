@@ -56,6 +56,7 @@ class _HeadDiagonalPainter extends CustomPainter{
     //Propiedades
     lapiz.color = Color(0xff615AAB);
     lapiz.style = PaintingStyle.stroke; //.fill
+    //lapiz.style = PaintingStyle.fill;  //Rellena el color del cuadro dibujado
     lapiz.strokeWidth = 20;
 
     final path = new Path();
