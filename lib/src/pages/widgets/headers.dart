@@ -64,6 +64,8 @@ class _HeadDiagonalPainter extends CustomPainter{
     path.moveTo(0, size.height * 0.5);
     path.lineTo(size.width, size.height * 0.5);
     path.lineTo(size.width, 0);
+    path.lineTo(0, 0);
+    path.lineTo(0, size.height * 0.5);
 
 
 
