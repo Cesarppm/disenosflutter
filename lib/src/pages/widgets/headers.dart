@@ -35,13 +35,9 @@ class HeaderDiagonal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Transform.rotate(
-      angle: -0.9,
-      child: Container(
-        height: 500,
-        width: 1000,
-      color:Color.fromARGB(255, 18, 18, 24),
-    )
+    return Container(
+      height: 300,
+    color:Color.fromARGB(255, 18, 18, 24),
     );
   }
 }
