@@ -36,8 +36,45 @@ class HeaderDiagonal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-    color:Color.fromARGB(255, 18, 18, 24),
+      height: double.infinity,
+      width: double.infinity,
+    color:Color.fromARGB(255, 80, 11, 107),
+    child: CustomPaint(
+      painter: _HeadDiagonalPainter(),
+      ),
     );
   }
+}
+
+class _HeadDiagonalPainter extends CustomPainter{
+  @override
+  void paint(Canvas canvas, Size size) {
+    // TODO: implement paint
+
+    final lapiz = Paint();
+
+    //Propiedades
+    lapiz.color = Color(0xff615AAB);
+    lapiz.style = PaintingStyle.stroke; //.fill
+    lapiz.strokeWidth = 20;
+
+    final path = new Path();
+
+    //Dibujar con el path y el lapiz
+    path.moveTo(0, size.height * 0.5);
+    path.lineTo(size.width, size.height * 0.5);
+    path.lineTo(size.width, 0);
+
+
+
+    canvas.drawPath(path, lapiz);
+
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    // TODO: implement shouldRepaint
+    throw UnimplementedError();
+  }
+
 }
